@@ -6,7 +6,6 @@ export const dbConnect = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true
     })
-    console.log(process.env.DB_URL)
     console.log(`MongoDB connected: ${db.connection.host}`)
   } catch (error) {
     console.log(error)
