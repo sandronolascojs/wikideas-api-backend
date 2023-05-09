@@ -9,6 +9,10 @@
         {
             "url": "http://localhost:3500/api",
             "description": "Local server"
+        },
+        {
+            "url": "https://api-backend-wikiideas-ddd-production.up.railway.app/api",
+            "description": "Production server"
         }
     ],
     "paths": {
