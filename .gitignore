@@ -4,3 +4,5 @@ data
 Dockerfile
 docker-compose.yml
 dist
+.dockerignore
+pnpm-lock.yaml
