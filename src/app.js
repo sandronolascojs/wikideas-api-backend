@@ -1,5 +1,4 @@
 import path from 'node:path'
-import { readFile } from 'node:fs/promises';
 import express from 'express'
 import swagger from 'swagger-ui-express'
 import expressRateLimit from 'express-rate-limit'
@@ -8,11 +7,7 @@ import cors from 'cors'
 import { categoriesRoutes } from './routes/categories.routes.js'
 import { articlesRoutes } from './routes/articles.routes.js'
 import { dirname } from './shared/config/route.utils.js'
-const swaggerDoc = JSON.parse(
-  await readFile(
-    new URL('./swagger.docs.json', import.meta.url)
-  )
-);
+const swaggerDoc = require('../swagger.docs.json')
 
 const uploadDestination = path.resolve(dirname, 'src', 'public', 'uploads')
 
